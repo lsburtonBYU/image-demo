@@ -13,19 +13,23 @@
 <body>
   <article>
     <h1>The mighty Amstaff</h1>
-    <img src="juno-large.jpg" alt="mighty Amstaff named Juno">
+    <img src="images/juno-large.jpg" alt="mighty Amstaff named Juno">
     <p>The image above is a 2800px x 2100px JPEG file with minimal compression,
       making the file size 2.1MB. In this web page, the image is limited
       to a max width of 600px. In the Network tab of the Dev Tools, disable
       the cache and throttle the connection to a 3G or less speed to see
       the lag caused by large images.
     </p>
-    <p>Fugit placeat consequatur voluptatem alias quos explicabo animi sunt aliquam quibusdam deleniti ab molestias
-      necessitatibus, illo neque unde facilis eius inventore nostrum laudantium sequi quo possimus facere provident!
-      Quaerat, laboriosam.</p>
-    <p>Consectetur aliquam esse reiciendis, illum eveniet rem sapiente quas maiores itaque quam id deserunt saepe,
-      doloribus non ea, ex molestias ipsum? Perferendis earum debitis voluptatum consequuntur dignissimos inventore
-      cupiditate ullam.</p>
+    <h2>An appropriate image size</h2>
+    <p>The same image below is sized to 600px x and is compressed at 80% for
+      a file size of 33.2KB. If the connection is throttled down, this image won't load
+      until the larger image loads. </p>
+    <img src="images/juno-adjusted.jpg" alt="mighty Amstaff named Juno">
+    <p>Also, with a slow connection, this text will "jump" down after the second
+      images loads because it wasn't assigned an aspect ratio in the CSS (this image is 4/3).
+      It wasn't given height and width attributes in the HTML either, which would
+      let the browser calculate the aspect ratio.
+    </p>
   </article>
 </body>
 
